@@ -89,6 +89,16 @@ function queenClickW() {
 
 const checkAnswer = document.getElementById("checkAnswer")
 
+const refreshPage = document.getElementById("refreshPage")
+
+refreshPage.addEventListener("click", reloadPage);
+
+function reloadPage() {
+
+location.reload();
+
+}
+
 checkAnswer.addEventListener("click", answerChecker);
 
 var result = []
@@ -114,8 +124,14 @@ function answerChecker() {
     var arr = da()
     console.log(result)
 
-
     var error = 0
+
+    if (arr.length <= 7) {
+        swal.fire("Add More Queens", {
+            buttons: false,
+          });
+        return
+    }
 
     for (var i = 0; i < arr.length - 1; i++) {
         for (var k = i + 1; k < arr.length; k++) {
@@ -124,9 +140,14 @@ function answerChecker() {
     }
 
     if (error == 0) {
-        alert("youre cool")
+        swal.fire("Congrats You Got It!", {
+            buttons: false,
+          });
     } else {
-        alert("you suck ass")
+        // alert("try again")
+        swal.fire("Not Correct", {
+            buttons: false,
+          });
     }
     arr = []
     return error == 0;

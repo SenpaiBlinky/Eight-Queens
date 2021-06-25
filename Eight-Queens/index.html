@@ -4,11 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<!-- SWEET ALERT -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
     <title>Queens</title>
   </head>
   <body>
 
-    <button id="checkAnswer" style="width: 100px; height: 20px;"></button>
+    <!-- <button id="checkAnswer" style="width: 100px; height: 50px; position: absolute; left: 45%; top: 5%;">Check Solution</button> -->
+
+    <!-- <button id="refreshPage" style="width: 100px; height: 50px; position: absolute; left: 30%; top: 5%;">Clear Board</button> -->
+
     
     <div class="board">
       <span id="row1">
@@ -93,6 +107,15 @@
       </span>
   </div>
 
+  <div class="button-block">
+    <div id="checkAnswer" class="social"><a href="#" style="color: aliceblue; text-decoration: none; font-family: 'Roboto', sans-serif; position: absolute; left: 20%; top: 20%;">Check Board</a></div>
+    <div id="refreshPage" class="social"><a href="#" style="color: aliceblue; text-decoration: none; font-family: 'Roboto', sans-serif; position: absolute; right: 20%; top: 20%;">Clean Board</a></div>
+    <!-- <div class="social"><a href="#"> <i class="fab fa-facebook"></i></a></div>
+    <div class="social"><a href="#"> <i class="fab fa-twitter"></i></a></div>
+    <div class="social"><a href="#"> <i class="fab fa-instagram"></i></a></div>
+    <div class="social"><a href="#"> <i class="fab fa-youtube"></i></a></div> -->
+  </div>
+  
 
     <script type="module" src="/main.js"></script>
   </body>
