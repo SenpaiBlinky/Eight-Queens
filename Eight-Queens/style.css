@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background: #ff4181; */
+  background: rgb(94, 10, 189);
+}
+
+.board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg) skew(25deg);
+  /* ----------------------------- ^ extras ---------- ^ ---- */
+  width: 480px;
+  height: 480px;
+  transition: 0.5s;
+  background: #000;
+  box-shadow: -30px 30px 30px rgba(0, 0, 0, 0.8);
+}
+
+.board span {
+  width: 480px;
+  height: 60px;
+  display: block;
+  font-size: 0; 
+  /* INSANE ^^ */
+}
+
+.board span span {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.board:before {
+  content: '';
+  position: absolute;
+  /* bottom: -20px; */
+  right: 250px;
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 50%, #000 50%, #000 100%);
+  background-size: 120px;
+  transform: rotate(90deg) skew(45deg);
+  top: 240px;
+}
+
+
+.board:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10.3px;
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%);
+  background-size: 120px;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
