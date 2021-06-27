@@ -73,7 +73,7 @@ function queenClickW() {
             } else {
                 swal.fire("No More Queens", {
                     buttons: false,
-                  });
+                  }); //da
             }
 
     } else {
