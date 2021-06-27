@@ -46,8 +46,9 @@ function queenClickB() {
             this.innerHTML = ""
             queenCount -= 1
             } else {
-
-        alert("no more queens")
+                swal.fire("No More Queens", {
+                    buttons: false,
+                  });
             }
     } else {
     
@@ -70,8 +71,9 @@ function queenClickW() {
             this.innerHTML = ""
             queenCount -= 1
             } else {
-
-        alert("no more queens")
+                swal.fire("No More Queens", {
+                    buttons: false,
+                  });
             }
 
     } else {
